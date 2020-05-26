@@ -1,0 +1,42 @@
+new file
+from math import factorial
+sys.setrecursionlimit(2000)
+print(sys.getrecursionlimit())
+
+x = int(input("enter a number: "))
+print(factorial(x))
+print()
+#factorial n! = n * (n-1)
+x = 8
+
+if x == 0:    # factorial of 0 is 1, negative numbers do not have factorial
+    print(1)
+elif x < 0:
+    print('Factorial does not exist')
+else:
+    for i in range(x-1,0,-1):
+        x *= i
+    print(x)
+print()
+
+
+#factorial
+def fact(n):
+    f = 1
+    for i in range(1,n+1):
+        f = f*i
+    return f
+
+x = 5
+result = fact(x)
+print(result)
+
+# recurssive factorial
+def fact(n):
+    if n == 0:
+        return 1
+    return n * fact(n-1)
+
+x = 5
+result = fact(x)
+print(result)
